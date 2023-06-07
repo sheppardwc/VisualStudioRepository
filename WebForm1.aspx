@@ -8,8 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            Welcome!</div>
+        <div>ASPX Page</div>
     </form>
 </body>
 </html>
