@@ -2,54 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orivision Live Stream</title>
-  <!-- Video.js CSS -->
+  <title>Orivision Live Feed</title>
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #111;
-      font-family: Arial, sans-serif;
-      color: #fff;
-    }
-    .video-js {
-      width: 80%;
-      max-width: 960px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    }
-    h1 {
-      position: absolute;
-      top: 20px;
-      text-align: center;
-      width: 100%;
-      font-size: 24px;
-      color: #fff;
-    }
+    body { display:flex; justify-content:center; align-items:center; height:100vh; background:#111; margin:0; }
+    .video-js { width:80%; max-width:960px; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.6); }
   </style>
 </head>
 <body>
-  <h1>Orivision Live Stream</h1>
-  <video
-    id="orivision-stream"
-    class="video-js vjs-default-skin"
-    controls
-    autoplay
-    muted
-    playsinline
-  >
-    <!-- Replace the URL below with your Orivision HLS URL -->
-    <source src="http://38.77.59.254:80/chn1.m3u8" type="application/x-mpegURL">
-    Your browser does not support HTML5 video.
+  <video id="orivision-stream" class="video-js vjs-default-skin" controls autoplay>
+    <source src="http://38.77.59.254:80/chn1.m3u8
+" type="application/x-mpegURL">
   </video>
-
-  <!-- Video.js JS -->
   <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 </body>
 </html>
-
