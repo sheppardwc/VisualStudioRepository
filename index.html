@@ -2,14 +2,17 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Orivision Live Feed</title>
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <style>
+    body { display:flex; justify-content:center; align-items:center; height:100vh; background:#111; margin:0; }
+    .video-js { width:80%; max-width:960px; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.6); }
+  </style>
 </head>
 <body>
-    <div>HTML Page</div>
-    <div>
-        "test"
-        <a href="WebForm1.aspx">WebForm1.aspx</a>
-
-    </div>
+  <video id="orivision-stream" class="video-js vjs-default-skin" controls autoplay>
+    <source src="rtp://@232.255.42.41:8080" type="application/x-mpegURL">
+  </video>
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 </body>
 </html>
