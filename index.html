@@ -6,7 +6,19 @@
 </head>
 <body>
 "This is a Media Test page"
-  
-
+<video id="video" controls autoplay width="640" height="360"></video>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+  var video = document.getElementById('video');
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource('http://38.77.59.254:80/chn1.m3u8');
+    hls.attachMedia(video);
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = 'http://YOUR_DOMAIN:8080/stream.m3u8';
+  }
+</script>
+ 
+</body>
 </html>
 
